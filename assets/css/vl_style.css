@@ -1,0 +1,205 @@
+/*
+================
+ VARIABLES
+================
+*/
+.page-logo {
+  width: 70px;
+}
+
+.nav-custom {
+  margin: 0 10%;
+}
+
+.nav-custom .nav-item .btn:hover {
+  color: white;
+}
+
+.skills-icons {
+  margin: 1em;
+}
+
+.skills-icons img {
+  width: 13%;
+  padding: 1em;
+}
+
+.mh-about-tag {
+  margin: 4em 0;
+  margin-bottom: 1em;
+}
+
+.work-logos h5 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.work-logos img {
+  margin: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.work-logos .playstation {
+  width: 90%;
+  margin-left: 5%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.work-logos .bebop {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.work-logos .gaia {
+  margin-left: 15%;
+  width: 70%;
+}
+
+.work-logos .sandc {
+  width: 50%;
+}
+
+.image-zoom {
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.image-zoom:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.profile-image {
+  position: relative;
+}
+
+.profile-pic-pixels {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.profile-pic-pixels:hover {
+  opacity: 1;
+}
+
+.down-pointer {
+  margin-top: 8%;
+  padding: 0 0;
+}
+
+.down-pointer img {
+  width: 100px;
+  height: 100px;
+}
+
+.about-p p {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.sprite-img {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  margin-top: 10%;
+}
+
+.mh-about {
+  background-color: #880304;
+  padding: 1em 0;
+}
+
+.mh-portfolio {
+  background-color: #880304;
+}
+
+.mh-service {
+  margin-bottom: 5%;
+}
+
+.blog-inner .learn-more {
+  font-size: 18px;
+}
+
+.contact {
+  background-color: #880304;
+  padding: 3%;
+}
+
+.contact h3 {
+  padding: 0;
+  margin: 1em 0;
+}
+
+.contact p {
+  font-size: 20px;
+  margin-bottom: 2em;
+}
+
+.contact .contact-info {
+  margin-top: -7%;
+  margin-left: 3%;
+  margin-right: -3%;
+  font-size: 18px;
+}
+
+.contact .contact-info .contact-text {
+  text-align: start;
+}
+
+.contact .contact-info .contact-text li {
+  margin: 2em;
+}
+
+.contact .contact-info .contact-text i {
+  margin-right: 1em;
+}
+
+.contact .contact-info .social-icon {
+  margin-left: 15%;
+  margin-top: 1em;
+}
+
+.contact .contact-info .social-icon i {
+  font-size: 25px;
+}
+
+footer {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+footer .col {
+  margin: 1em 0;
+}
+
+footer .social-icon i {
+  font-size: 30px;
+}
+
+footer .contact-text li {
+  margin-bottom: 1em;
+}
+
+footer .contact-text i {
+  margin-right: 1em;
+  font-size: 20px;
+}
+
+footer .contact-text text {
+  font-size: 30px;
+}
+
+footer .footer-info {
+  margin-top: 5em;
+}
+/*# sourceMappingURL=vl_style.css.map */

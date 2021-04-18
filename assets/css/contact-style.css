@@ -1,0 +1,51 @@
+.page-logo {
+  width: 70px;
+}
+
+.nav-custom {
+  margin: 0 10%;
+}
+
+.contact {
+  padding: 3%;
+  margin-top: 100px;
+}
+
+.contact h3 {
+  padding: 0;
+  margin: 1em 0;
+}
+
+.contact p {
+  font-size: 20px;
+  margin-bottom: 2em;
+}
+
+.contact .contact-info {
+  margin-top: -7%;
+  margin-left: 3%;
+  margin-right: -3%;
+  font-size: 18px;
+}
+
+.contact .contact-info .contact-text {
+  text-align: start;
+}
+
+.contact .contact-info .contact-text li {
+  margin: 2em;
+}
+
+.contact .contact-info .contact-text i {
+  margin-right: 1em;
+}
+
+.contact .contact-info .social-icon {
+  margin-left: 15%;
+  margin-top: 1em;
+}
+
+.contact .contact-info .social-icon i {
+  font-size: 25px;
+}
+/*# sourceMappingURL=contact-style.css.map */

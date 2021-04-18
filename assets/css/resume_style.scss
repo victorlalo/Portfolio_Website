@@ -1,0 +1,144 @@
+@import "css-tree";
+@import "variable";
+@import "functions";
+@import "default-css";
+
+.page-logo {
+    width: 70px;
+    // border-radius: 50%;
+}
+
+.nav-custom{
+    margin: 0 10%;
+
+    .image-zoom{
+        transition: transform .4s;
+    }
+    
+    .image-zoom:hover{
+        transform: scale(1.25);
+    }
+}
+
+.resume-title{
+    // margin-left: 15%;
+    margin-top: -5%;
+    margin-bottom: 30px;
+    h1{
+        margin-bottom: .1em;
+    }
+    .resume-contact{
+        // padding: 0 1%;
+        // margin-bottom: .5em;
+        margin-top: 1em;
+        a{
+            margin-right: 2em;
+            margin-left: .5em;
+        }
+    }
+}
+
+.image-zoom{
+    transition: transform .4s;
+}
+
+.image-zoom:hover{
+    transform: scale(1.025);
+}
+
+.resume-socials{
+    margin-left: 1em;
+    i{
+        font-size: 16px;
+        margin-right: 1em;
+    }
+}
+
+/// EDUCATION BOX 
+.resume-section-title{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.info-box{
+    padding: 26px 30px;
+    border-radius: 5px;
+    @include box-shadow($shadows);
+    box-shadow: 0px 10px 20px 4px #00000015;
+    -webkit-box-shadow: -1rem 0 3rem #000;
+    box-shadow: -1rem 0 3rem #000;
+    margin: 3.5em 0;
+    background-color: #332c2c;
+    h4 {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+        color: $main-color;
+    }
+    .edu-year {
+        margin: 10px 0;
+        color: $main-color;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    ul{
+        padding-left: 20px;
+
+        li{
+        list-style-type: disc;
+        margin-bottom: 1em;
+        // list-style-position: inside;
+        // text-indent: -1em;
+        // padding-left: 1em;
+        font-size: 16px;
+    }
+    }
+
+    
+}
+
+.skills-icon img{
+    width: 50px;
+}
+
+.invert{
+    img{
+        filter: invert(1);
+    }
+}
+
+.right-side{
+    margin: 0 30px;
+}
+
+.resume-body {
+    // .left-side{
+    //     margin-left:10%;
+    // }
+    // .right-side{
+    //     margin-right: 10%;
+    // }
+    
+    
+
+    .column-divider{
+        margin: 0 -3%;
+    }
+}
+
+.resume-body.container-fluid{
+    margin-left: 13%;
+    margin-bottom: 5%;
+}
+
+.work-responsibility{
+    i{
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+}
