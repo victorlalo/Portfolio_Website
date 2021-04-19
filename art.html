@@ -38,6 +38,15 @@
 </head>
 
 <body class="dark-vertion black-bg">
+    <!-- Start Loader -->
+    <div class="section-loader">
+        <div class="loader">
+            <div></div>
+            <div></div> 
+        </div>
+    </div>
+    <!-- End Loader -->
+
     <!--
         ===================
            NAVIGATION
@@ -47,7 +56,7 @@
         <div class="nav-custom">
             <div class="row">
                 <nav class="navbar navbar-expand-lg mh-nav nav-btn">
-                    <a class="navbar-brand" href="/index.html">
+                    <a class="navbar-brand" href="/">
                         <img src="vl_assets/Logos/V_logo_4_transparent.png" alt="" class="img-fluid page-logo image-zoom">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -59,7 +68,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-0 ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/index.html">Home</a>
+                                <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/games.html">Games</a>
@@ -81,17 +90,17 @@
         </div>
     </header>
 
-    <section class="mh-portfolio" id="mh-portfolio">
+    <section class="portfolio-body" id="mh-portfolio">
         <div class="container">
-            <div class="row section-separator">
-                <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                    <h3>Art</h3>
-                </div>
+            <div class="portfolio-title text-center" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                <h3>Art</h3>
+            </div>
+            <div class="row">
                 <div class="part col-sm-12">
                     <div class="portfolio-nav col-sm-12" id="filter-button">
                         <ul>
-                            <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All</span></li>
-                            <li data-filter=".low-poly" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Low-Poly</span></li>
+                            <!-- <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All</span></li> -->
+                            <li data-filter=".low-poly" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Low-Poly</span></li>
                             <li data-filter=".hi-res" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Hi-Res</span></li>
                             <li data-filter=".wood" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Wood Burning</span></li>
                             <!-- <li data-filter=".led" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>LEDs</span></li> -->
@@ -240,7 +249,7 @@
     <script src="assets/plugins/js/isotope.pkgd.js"></script>
     <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
     <!-- Custom Scripts-->
-    <!-- <script src="assets/js/custom-scripts.js"></script> -->
+    <script src="assets/js/custom-scripts.js"></script>
 </body>
 
 <footer class="container">
