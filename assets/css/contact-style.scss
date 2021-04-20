@@ -51,3 +51,18 @@
     //     padding: 0 20%;
     // }
 }
+
+@media screen and (max-width:576px) {
+    .page-logo{
+        width: 50px;
+        margin: 10px;
+    }
+    .contact .contact-info .contact-text {
+        text-align: center;
+    }
+    .contact .contact-info {
+        align-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

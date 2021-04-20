@@ -595,7 +595,7 @@ ul li {
 }
 
 .dark-bg {
-  background-color: #202026;
+  background-color: #2e3037;
 }
 
 .section-separator {
@@ -777,6 +777,40 @@ button:focus {
 
 .page-title {
   margin-top: 4em;
+}
+
+.info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.above {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.below {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .above {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 10px;
+  }
+  .below {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .portfolio-body {

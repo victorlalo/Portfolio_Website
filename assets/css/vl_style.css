@@ -15,6 +15,30 @@
   color: white;
 }
 
+@media screen and (max-width: 576px) {
+  .down-pointer {
+    display: none;
+  }
+  .mh-home .img-border {
+    margin-top: 100px;
+    width: 70%;
+    height: 70%;
+  }
+  .mh-home .mh-header-info {
+    margin: 0;
+    padding: 0;
+  }
+  .mh-about-img {
+    display: none;
+  }
+  .mh-about-tag {
+    display: none;
+  }
+  .work-logos {
+    width: 60%;
+  }
+}
+
 .skills-icons {
   margin: 1em;
 }
@@ -147,8 +171,8 @@
 
 .contact .contact-info {
   margin-top: -7%;
-  margin-left: 3%;
-  margin-right: -3%;
+  margin-left: 5%;
+  margin-right: -5%;
   font-size: 18px;
 }
 
@@ -201,5 +225,21 @@ footer .contact-text text {
 
 footer .footer-info {
   margin-top: 5em;
+}
+
+@media screen and (max-width: 576px) {
+  .page-logo {
+    width: 50px;
+    margin: 10px;
+  }
+  .contact .contact-info .contact-text {
+    text-align: center;
+  }
+  .contact .contact-info {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=vl_style.css.map */

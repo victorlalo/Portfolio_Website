@@ -271,7 +271,11 @@
 .dark-vertion {
     opacity: 0.9;
     &.black-bg {
-        background-color: #100e17;;
+        background-color: #222222;;
+    }
+    
+    &.dark-bg {
+        background-color: #1d1b1b;;
     }
 
     .section-loader {

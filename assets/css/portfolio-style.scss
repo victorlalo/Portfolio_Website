@@ -48,8 +48,33 @@
     margin-top: 4em;
 }
 
+.info-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.above{
+    order: 2;
+}
+.below{
+    order: 1;
+}
+
+@media screen and (max-width:768px){
+    .above{
+        order: 1;
+        margin-top: 10px;
+    }
+    .below{
+        order:2;
+    }
+}
+
 // .card-image{
 //     width: 100%;
+// }
+
+// .games-body {
+//     margin: 10em;
 // }
 
 .portfolio-body{
