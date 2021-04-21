@@ -1,0 +1,46 @@
+@import "css-tree";
+@import "variable";
+@import "functions";
+@import "default-css";
+
+
+
+
+.fixed-sidebar{
+    @media (max-width:700px){
+        display: none;
+    }
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 30%;
+    // left: 2%;
+    li{
+        font-size: 18px;
+        margin: 20px 0;
+        font-weight: normal;
+    }
+    a{
+        margin-left: 16px;
+    }
+    h3{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    a:hover{
+        color: $main-color;
+    }
+}
+
+.height-divider{
+    margin: 5%;
+}
+
+.art-body{
+    h2{
+        margin: 1.5em 0;
+        margin-left: -2em;
+        
+    }
+}

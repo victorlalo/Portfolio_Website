@@ -7,8 +7,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .left-side{
     order: 1;
+    margin-right: 40px;
 }
 .right-side{
     order: 2;
@@ -46,7 +48,7 @@
 .resume-title{
     // margin-left: 15%;
     margin-top: -5%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     h1{
         margin-bottom: .1em;
     }
@@ -67,6 +69,18 @@
             margin-right: 2em;
             margin-left: .5em;
         }
+        a:hover{
+            color: $main-color;
+        }
+    }
+}
+
+.socials {
+    .social-icon{
+        font-size: 18px;
+        a:hover{
+            color: $main-color;
+        }
     }
 }
 
@@ -86,6 +100,10 @@
     }
 }
 
+// .column-divider {
+//     margin: 0 30px;
+// }
+
 /// EDUCATION BOX 
 .resume-section-title{
     font-size: 30px;
@@ -95,13 +113,13 @@
 }
 
 .info-box{
-    padding: 26px 30px;
+    padding: 24px 20px;
     border-radius: 5px;
     @include box-shadow($shadows);
     box-shadow: 0px 10px 20px 4px #00000015;
     -webkit-box-shadow: -1rem 0 3rem #000;
     box-shadow: -1rem 0 3rem #000;
-    margin: 3.5em 0;
+    margin: 2em 0;
     background-color: #332c2c;
     h4 {
         font-size: 20px;
@@ -151,9 +169,6 @@
     }
 }
 
-.right-side{
-    margin: 0 30px;
-}
 
 .work-responsibility{
     i{
@@ -166,6 +181,10 @@
     .container {
         max-width: 1600px;
     }
+}
+
+.container{
+    width: 100% !important;
 }
 
 

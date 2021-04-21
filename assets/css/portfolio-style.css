@@ -756,23 +756,38 @@ button:focus {
   color: white;
 }
 
-.sidebar {
-  margin-top: -100px;
-  padding: 60px 0;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-left: -40px;
+.fixed-sidebar {
   position: fixed;
-  border-width: .75em;
-  border-color: #bfbfbf;
-  border-style: double;
-  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 30%;
 }
 
-.sidebar-item a {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 50px;
+@media (max-width: 700px) {
+  .fixed-sidebar {
+    display: none;
+  }
+}
+
+.fixed-sidebar li {
+  font-size: 18px;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+.fixed-sidebar h3 {
+  margin-bottom: 30px;
+}
+
+.fixed-sidebar a:hover {
+  color: #D10304;
 }
 
 .page-title {
@@ -817,18 +832,6 @@ button:focus {
   margin: 4em 0;
 }
 
-.image-zoom {
-  -webkit-transition: -webkit-transform .8s;
-  transition: -webkit-transform .8s;
-  transition: transform .8s;
-  transition: transform .8s, -webkit-transform .8s;
-}
-
-.image-zoom:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .project-carousel {
   margin-top: 3em;
   margin-bottom: 3em;
@@ -871,6 +874,15 @@ button:focus {
   line-height: 30px;
   font-weight: 600;
   color: #D10304;
+}
+
+.info-box h2 {
+  font-size: 40px;
+}
+
+.info-box p {
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .info-box img {
