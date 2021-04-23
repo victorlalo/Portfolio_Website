@@ -915,9 +915,33 @@ button:focus {
           filter: invert(1);
 }
 
+.circle-progress {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15%;
+}
+
+.circle-progress .row {
+  margin-bottom: 1.5em;
+}
+
 .work-responsibility i {
   margin-right: 1em;
   margin-left: 1em;
+}
+
+.resume-certificates {
+  padding: 0 5%;
+  margin-top: 0;
+}
+
+.resume-certificates img {
+  width: 80%;
+}
+
+.resume-certificates h3 {
+  margin: 0 0;
 }
 
 @media screen and (min-width: 1800px) {

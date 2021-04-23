@@ -81,6 +81,11 @@
         </div>
     </header>
 
+    <section class="project-title">
+        <div class="container">
+            <h1 class="title">AMP-1</h1>
+    </section>
+
     <section class="project-carousel">
         <div class="container">
             <div id="demo" class="carousel slide" data-touch="true">
@@ -120,87 +125,53 @@
 
     <section class="project-about">
         <div class="container">
-            <div class="row ">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12">
-                            <div class="about-project">
-                                <h1 class="title">Wave Drifter</h1>
-                                <p>
-                                    For the Capstone Project of my 
-                                    <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>,
-                                    I wanted to do something unique, that acted as a culmination of my learning and proof of my abilities within the Unity Engine. I decided to create an
-                                    endless runner driving game, where the track keeps generating new sections with increasing difficulty.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
-                                </p>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="about-project">
+                        <p>
+                            I wanted to approach a game by starting with character design, and building out from there. I first sketched a cute robot on paper, then converted my 2D drawings to a 3D model using Blender. I rigged and animated my robot friend before starting work on the game. I designed AMP1 with a blaster as his right hand, centering gameplay around shooting. I wanted to give him a modular design, with the intent to upgrade parts of his body as the game progresses.
+                        </p>
 
-                                <video controls src="vl_assets/Portfolio/Band-Hero/band_demo_vid.mp4" class="project-video"></video>
+                        <!-- Assets Needed:
+                        -	Sketch, 3D model, animations and render -->
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                        <br>
+                        <h3>Level Building</h3>
 
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                </ul>
+                        <p>
+                            Once the character was done, I started to think about how he would traverse the world. I built world as a 2D platformer, with jumping and shooting as the main mechanics. I wanted to take mold the world around the character’s design and potential abilities. I began sketching level layouts on grid paper, then I used the Unity Level Builder to create simple block platforms based off my sketches.
 
-                                <q>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                </q>
+                            <!-- Assets Needed:
+                            -	Level sketches, then Unity Pro Builder snapshots -->
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                        </p>
+                        <p>
+                            Additionally I designed levels around solving puzzles. Rather than moving forward horizontally, sometimes forward movement is blocked, and the player must climb or drop to solve puzzle and unlock the blocked path.
 
-                                <h3>Lorem Ipsum Dolor</h3>
+                            <!-- Assets Needed:
+                            -	Puzzle design -->
+                        </p>
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
-                            </div>
+                        <br>
+                        <h3>Enemy Behavior and Inheritance</h3>
+                        <p>
+                            Before I created enemies, I made a base enemy class with which all enemy types would derive basic functionality from. This includes health, movement, detection, and state. The base enemy class uses a State Machine to control how the enemy behaves. They can be in the following states, and act according to specific parameters:
+                        </p>
+                        <ul>
+                            <li>Idle: the enemy patrols or sits waiting for the protagonist to enter their view</li>
+                            <li>Atack: If the enemy is aggressive, they will charge or shoot at the player</li>
+                            <li>Flee: If the enemy is defensive, they will run away or find an ideal distance to maximize their chance at survival</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container"><div class="line-divider"></div></div>
+                <div class="col-sm-12 ">
+                    <div class="row mh-related-post">
+                        <div class="prev-next-project col-md-6 text-left">
+                            <a href="/hyperspace.html"><i class="fa fa-angle-left"></i> Previous Project</a>
                         </div>
-                        <div class="col-sm-12 ">
-                            <div class="row mh-related-post">
-                                <div class="mh-blog-next-prev-post col-md-6 text-left">
-                                    <a href=""><i class="fa fa-angle-left"></i> Previous Project</a>
-                                </div>
-                                <div class="mh-blog-next-prev-post col-md-6 text-right">
-                                    <a href="">Next Project <i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
+                        <div class="prev-next-project col-md-6 text-right">
+                            <a href="/hose-your-daddy.html">Next Project <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>

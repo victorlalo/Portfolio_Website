@@ -80,6 +80,10 @@
             </div>
         </div>
     </header>
+    <section class="project-title">
+        <div class="container">
+            <h1 class="title">Garageband Hero</h1>
+    </section>
 
     <section class="project-carousel">
         <div class="container">
@@ -117,94 +121,72 @@
         </div>
     </section> 
 
-    <section class="project-title">
-        <div class="container">
-            <h1 class="title">Garageband Hero</h1>
-    </section>
+    
     <section class="project-about">
         <div class="container">
-            <div class="row ">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12">
-                            <div class="about-project">
-                                <p>
-                                    I've always loved the concept of party-driven RPGs. You meet friends along a journey,
-                                    and as a team do what you couldn't do alone. sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
-                                </p>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="about-project">
+                        <p>
+                            I've always loved the concept of party-driven RPGs. You meet friends along a journey,
+                            and as a team do what you couldn't do alone. This demo is more of a proof of concept, than a game, 
+                            as I believe this will take more than a one-man-team to complete. It is definitely the most ambitious 
+                            idea I’ve had thus far. All that said, I am very passionate about progressing with this, as I think it is a unique 
+                            combination of genres and I want to see more creative ways of using the RPG battle systems.
+                            I have challenged myself to create the base systems that can be developed further.
+                            
+                            
+                        </p>
+                        <p>
+                            The game currently features an interactable town where the player can walk around in. If the player enters the café, a battle starts. The player’s band challenges a rival band with a crowd onlooking. Instead of a health system, the crowd is swayed by the talent of each band. When the crowd is swung far enough in one direction, the battle ends.
+                        </p>
 
-                                <video controls src="vl_assets/Portfolio/Band-Hero/band_demo_vid.mp4" class="project-video"></video>
+                        <h3>
+                            State Machine Battle System
+                        </h3>
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                        <p>
+                            The turn-based battling system was created using a State Machine. This means that a game manager controls what phase of battle the game is in currently, and can transition to the next state based on conditions. The game manager alters behavior and player controls based on what phase is currently active. 
+                        </p>
+                        <p>
+                            For example, in the planning phase, the player must select moves for each band member, and only when all band members are ready can the game progress to the performance phase. State machines remove the need for each module to have long conditional chains in order to perform certain methods. Instead, the game manager can call specific methods for each module, ignoring functionality that does not pertain to the current state.
+                            <br>
+                            Each state has a transition to a following state, or the end state once the battle is complete.
+                        </p>
+                        <!-- -	State transitions video -->
+                        <br>
+                        <h3>
+                            Rhythm Elements
+                        </h3>
 
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                </ul>
+                        <p>
+                            Implementing a rhythm mechanic was a big challenge, but very rewarding to create music from code. The system is given a tempo in beats per minute, and generates note indicators at varying divisions (quarter notes, triplets, holds). To generate notes with proper timing, the system needs to account for a steady framerate. 
+                            elaborate
+                        </p>
+                        <p>
+                            As for tap detection, I placed a 2D collider where the notes should be hit on time, and a collider on each note. If the player taps the key when the two colliders are overlapping, the system registers that as successful, and rewards the player positively. If the player taps while there is no overlap, the system counts this as a failure. I can modify the leniency of an on-time hit by adjusting the radius of the two colliders. A larger radius makes it easier for the player to tap on-time. 
+                        </p>
+                        <!-- -	Rhythm element video -->
 
-                                <q>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                </q>
+                        <br>
+                        <h3>Crowd Generation and Responsiveness</h3>
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                        <p>
+                            Since the crowd determines the winner of the battle, it was important to have a crowd system that felt alive. To implement this, I created a modular prefab that I can assign skin and shirt colors. I created a few crowd dancing animations, and then developed a system of generating a grid of these prefabs. The entire crowd is controlled by one script, calling each of the crowd objects when an event occurs. Currently the crowd can go from idle to dancing, and turn around to face the band that is currently active in battle.
+                        </p>
+                        <!-- -	Crowd generation
+                        -	Crowd animation video -->
 
-                                <h3>Lorem Ipsum Dolor</h3>
-
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
-                            </div>
+                    </div>
+                </div>
+                <div class="container"><div class="line-divider"></div></div>
+                <div class="col-sm-12 ">
+                    <div class="row mh-related-post">
+                        <div class="prev-next-project col-md-6 text-left">
+                            <a href=""><i class="fa fa-angle-left"></i> Previous Project</a>
                         </div>
-                        <div class="container"><div class="line-divider"></div></div>
-                        <div class="col-sm-12 ">
-                            <div class="row mh-related-post">
-                                <div class="prev-next-project col-md-6 text-left">
-                                    <a href=""><i class="fa fa-angle-left"></i> Previous Project</a>
-                                </div>
-                                <div class="prev-next-project col-md-6 text-right">
-                                    <a href="">Next Project <i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
+                        <div class="prev-next-project col-md-6 text-right">
+                            <a href="/wave-drifter.html">Next Project <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>

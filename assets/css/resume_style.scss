@@ -169,11 +169,34 @@
     }
 }
 
+.circle-progress{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    // margin-top: 1em;
+    padding: 15%;
+
+    .row{
+        margin-bottom: 1.5em;
+    }
+}
+
 
 .work-responsibility{
     i{
         margin-right: 1em;
         margin-left: 1em;
+    }
+}
+
+.resume-certificates{
+    padding: 0 5%;
+    margin-top: 0;
+    img{
+        width:80%;
+    }
+    h3{
+        margin: 0 0;
     }
 }
 

@@ -81,6 +81,11 @@
         </div>
     </header>
 
+    <section class="project-title">
+        <div class="container">
+            <h1 class="title">Hyperspace Defender</h1>
+    </section>
+
     <section class="project-carousel">
         <div class="container">
             <div id="demo" class="carousel slide" data-touch="true">
@@ -95,13 +100,13 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="vl_assets/Portfolio/Wave-Drifter/Title_Screen.png" alt="Pic 1">
+                    <img src="vl_assets/Portfolio/Hyperspace/HSD_Title_Screen.png" alt="Pic 1">
                   </div>
                   <div class="carousel-item">
-                    <img src="vl_assets/Portfolio/Wave-Drifter/Game_Screenshot_1.png" alt="Pic 2">
+                    <img src="vl_assets/Portfolio/Hyperspace/HSD_Gameplay.png" alt="Pic 2">
                   </div>
                   <div class="carousel-item">
-                    <video controls src="vl_assets/Portfolio/Wave-Drifter/WD_Demo.mp4"></video>
+                    <img src="vl_assets/Portfolio/Hyperspace/HSD_Controls.png" alt="Pic 3">
                   </div>
                 </div>
               
@@ -120,87 +125,72 @@
 
     <section class="project-about">
         <div class="container">
-            <div class="row ">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12">
-                            <div class="about-project">
-                                <h1 class="title">Wave Drifter</h1>
-                                <p>
-                                    For the Capstone Project of my 
-                                    <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>,
-                                    I wanted to do something unique, that acted as a culmination of my learning and proof of my abilities within the Unity Engine. I decided to create an
-                                    endless runner driving game, where the track keeps generating new sections with increasing difficulty.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
-                                </p>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="about-project">
+                        <p>
+                            This game was made for the University of Colorado 
+                            <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>.
+                             The task was to create a 2D shooter inspired by the arcade space games of the early 80’s. We were to concentrate mainly on the game mechanics, including movement, object collision, and enemy behavior. I went a few steps further and made original 3D models in Blender, and an original song and sound effects in Ableton Live. You can play by visiting the itch.io link below.
+                        </p>
+                        <p>
+                            The game is one endless level, where the player tries to defend against an endless wave of galactic threats. While the gameplay is derivative of some of the greats like Galaga, Space Invaders, and Gradius, I used some features that helped optimize the speed and development of the game.
+                        </p>
 
-                                <video controls src="vl_assets/Portfolio/Band-Hero/band_demo_vid.mp4" class="project-video"></video>
+                        <div class="align-content-center"><iframe width="500" height="300" src="https://www.youtube.com/embed/G54n8Ep-PX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                        <br>
+                        <h3>Object Pooling</h3>
 
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                </ul>
+                        <p>
+                            I utilized object pooling to make use of resources more efficient. Pooling allows the engine to pre-load many objects that would have to be instantiated very often and setting the active state to false, ready to activate whenever it is needed. Object pooling was used for player and enemy bullets, visual effects (explosions), and item pickups.
+                        </p>
+                        <p>
+                            For example, when a player shoots, a bullet would normally have to be instantiated at the ship’s position. When the bullet hits an enemy or exits the screen, that object would need to be destroyed. This can be costly if many bullets are constantly entering and leaving the scene.  
+                        </p>
+                        <p>
+                            With object pooling, a large amount of bullets are instantiated at the start of the level. When the player shoots, the system instead places an inactive bullet from the pool at the position of the ship, and sets it to active. The bullet is then set to inactive and returned to the pool instead of being destroyed. If there are no available inactive bullets, the pooling system instantiates a set number of extra bullets and places them in the inactive pool.
+                        </p>
+                        <!-- Assets Needed:
+                        -	 Video of bullets activating and deactivating as player shoots -->
 
-                                <q>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                </q>
+                        <br>
+                        <h3>Multiple Weapons and Item Pickups</h3>
+                        <p>
+                            I added an item pickup system giving the player more attack and defense options. There are three weapon types and a shield. The items have differing spawn chances when an enemy is destroyed, weighed from least valuable to most. See below the different pickups and their abilities.
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                            <!-- Assets Needed:
+                            -	Rotating Items in a row, description of each item and how it was programmed -->
+                        </p>
 
-                                <h3>Lorem Ipsum Dolor</h3>
+                        <br>
+                        <h3>Enemy Behavior Inheritance</h3>
+                        <p>
+                            I was able to use inheritance for enemy behavior, saving development time on the creation of new enemy types. While each alien color and the UFO move and attack differently, they all share a Parent Class for base enemy behavior. Each Child Class can then implement new behaviors such as movement variations, life-points, or frequency of attack. See below for how each enemy differs.
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
-                            </div>
+                            <!-- Assets Needed:
+                            -	Enemy movement video, rotating video of enemies in a row. Talk about how I created them in blender -->
+                        </p>
+
+                        <br>
+                        <h3>Responsive Sound</h3>
+                        <p>
+                            When creating the sounds and music for the game, I kept in mind that I wanted the sound to be responsive to changes in game state. 
+                        </p>
+
+                        <h3>Particle System</h3>
+
+
+                    </div>
+                </div>
+                <div class="container"><div class="line-divider"></div></div>
+                <div class="col-sm-12 ">
+                    <div class="row mh-related-post">
+                        <div class="prev-next-project col-md-6 text-left">
+                            <a href="/wave-drifter.html"><i class="fa fa-angle-left"></i> Previous Project</a>
                         </div>
-                        <div class="col-sm-12 ">
-                            <div class="row mh-related-post">
-                                <div class="mh-blog-next-prev-post col-md-6 text-left">
-                                    <a href=""><i class="fa fa-angle-left"></i> Previous Project</a>
-                                </div>
-                                <div class="mh-blog-next-prev-post col-md-6 text-right">
-                                    <a href="">Next Project <i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
+                        <div class="prev-next-project col-md-6 text-right">
+                            <a href="/ampy.html">Next Project <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>

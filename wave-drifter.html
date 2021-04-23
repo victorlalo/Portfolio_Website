@@ -81,6 +81,11 @@
         </div>
     </header>
 
+    <section class="project-title">
+        <div class="container">
+            <h1 class="title">Wave Drifter</h1>
+    </section>
+
     <section class="project-carousel">
         <div class="container">
             <div id="demo" class="carousel slide" data-touch="true">
@@ -120,87 +125,59 @@
 
     <section class="project-about">
         <div class="container">
-            <div class="row ">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12">
-                            <div class="about-project">
-                                <h1 class="title">Wave Drifter</h1>
-                                <p>
-                                    For the Capstone Project of my 
-                                    <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>,
-                                    I wanted to do something unique, that acted as a culmination of my learning and proof of my abilities within the Unity Engine. I decided to create an
-                                    endless runner driving game, where the track keeps generating new sections with increasing difficulty.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
-                                </p>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="about-project">
+                        <p>
+                            For the Capstone Project of my 
+                            <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>,
+                            I wanted to do something unique, that acted as a culmination of my learning and proof of my abilities within the Unity Engine. The assignment was free-form, as long as we presented a functional game by the deadline. I decided that I wanted to explore the endless runner genre, while combining it with the speed and thrill of racing. The result is this Synthwave-inspired game, where you endlessly drive into the matrix horizon, collecting coins and flipping through the air for a high-score.
+                        </p>
 
-                                <video controls src="vl_assets/Portfolio/Band-Hero/band_demo_vid.mp4" class="project-video"></video>
+                        <h3>Endless Platform Generation</h3>
+                        <p>
+                            As the car progresses through the world, new platforms are created and randomly populated with ramps, obstacles and power ups. This is accomplished through Trigger Gates placed at the end of each active platform and a Linked List of active platforms. When the car passes through a gate, the first platform of the Linked List is moved to a new position at the end of the chain, and new objects are generated on the platform. There are always a fixed number of platforms active at one time
+                            <!-- Assets Needed:
+                            -	Video of editor where platforms spawn and disappear as the car moves. Show colliders and hierarchy of object placement -->
+                        </p>
+                        <br>
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                        <h3>Trick/Flip Recognition</h3>
+                        <p>
+                            One of the main mechanics is the ability to do tricks in the air. The car can flip forward, backwards, barrel roll, or do a combination of forward and sideways motion. I implemented a trick recognition system that can assign points based on the number of flips the player does. The system does nothing as the car is on the ground, but when the car is airborne, it starts to track the change in the car’s x and y rotation changes. Every time a car’s rotation passes a multiple of 360 degrees, points are awarded based on the flip. Additionally, if a flip is stopped midway through, the car will rotate back to 0 before landing.
+                            <!-- Assets Needed:
+                            -	Transform inspector with indicator showing 360 rotation and corresponding trick Text -->
+                        </p>
+                        <br>
 
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                </ul>
+                        <h3>Event System</h3>
 
-                                <q>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                </q>
+                        <p>
+                            Many components of the game rely on an Events System to communicate between each other. Both the platform generation and flip recognition mentioned above, plus any communication with the Heads Up Display utilizes events. By creating an event manager, objects can invoke and listen for events. When an event is invoked, any listeners subscribed to that event will be notified and begin the methods required by the method. 
+                            For example, any time the car collides with a coin, an event is invoked by the coin object. The HUD coin counter is listening for this event, and increments the counter every time the event is invoked.  
+                            <!-- Assets Needed:
+                            -	Console logging events, show how an event is invoked and listener responding -->
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
+                        </p>
+                        <br>
 
-                                <h3>Lorem Ipsum Dolor</h3>
+                        <h3>Items</h3>
 
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
-                            </div>
+                        <p>
+                            The player can pick up a variety of objects. See their effects below.
+                            <!-- Assets Needed:
+                            -	Rotating Items in a row, description of each item and how it was programmed -->
+                        </p>
+                    </div>
+                </div>
+                <div class="container"><div class="line-divider"></div></div>
+                <div class="col-sm-12 ">
+                    <div class="row mh-related-post">
+                        <div class="prev-next-project col-md-6 text-left">
+                            <a href="/band.html"><i class="fa fa-angle-left"></i> Previous Project</a>
                         </div>
-                        <div class="col-sm-12 ">
-                            <div class="row mh-related-post">
-                                <div class="mh-blog-next-prev-post col-md-6 text-left">
-                                    <a href=""><i class="fa fa-angle-left"></i> Previous Project</a>
-                                </div>
-                                <div class="mh-blog-next-prev-post col-md-6 text-right">
-                                    <a href="">Next Project <i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
+                        <div class="prev-next-project col-md-6 text-right">
+                            <a href="/hyperspace.html">Next Project <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>

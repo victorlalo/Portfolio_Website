@@ -1701,10 +1701,6 @@ li .fa {
   margin-bottom: 60px;
 }
 
-.mh-professional-skills {
-  padding-left: 20%;
-}
-
 .mh-professional-skills h3 {
   font-size: 30px;
   line-height: 40px;
@@ -1713,11 +1709,15 @@ li .fa {
   margin-bottom: 60px;
 }
 
+.mh-professional-progress {
+  margin-top: 24px;
+}
+
 .mh-professional-progress li {
   display: inline-block;
   margin: 0 auto;
   float: none;
-  width: 48%;
+  width: 60%;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -1747,9 +1747,8 @@ li .fa {
 }
 
 .mh-progress.mh-progress-circle {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
+  display: block;
+  width: 100%;
 }
 
 .mh-progress path:nth-child(1) {
