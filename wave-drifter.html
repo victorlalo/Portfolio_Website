@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/vl_style.css">
     <link rel="stylesheet" href="assets/css/portfolio-style.css">
+    <link rel="stylesheet" href="assets/css/paragraph-style.css">
 
 </head>
 
@@ -135,45 +136,53 @@
                         </p>
 
                         <h3>Endless Platform Generation</h3>
-                        <p>
-                            As the car progresses through the world, new platforms are created and randomly populated with ramps, obstacles and power ups. This is accomplished through Trigger Gates placed at the end of each active platform and a Linked List of active platforms. When the car passes through a gate, the first platform of the Linked List is moved to a new position at the end of the chain, and new objects are generated on the platform. There are always a fixed number of platforms active at one time
-                            <!-- Assets Needed:
-                            -	Video of editor where platforms spawn and disappear as the car moves. Show colliders and hierarchy of object placement -->
-                        </p>
-                        <img src="vl_assets/Portfolio/Wave-Drifter/platform_spawn.gif" alt="">
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Wave-Drifter/platform_spawn.gif" alt="" style="width: 500px">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                As the car progresses through the world, new platforms are created and randomly populated with ramps, obstacles and power ups. This is accomplished through Trigger Gates placed at the end of each active platform and a Linked List of active platforms. When the car passes through a gate, the first platform of the Linked List is moved to a new position at the end of the chain, and new objects are generated on the platform. There are always a fixed number of platforms active at one time
+                            </div>
+                        </div>
+                        
                         <br>
 
                         <h3>Trick/Flip Recognition</h3>
-                        <p>
-                            One of the main mechanics is the ability to do tricks in the air. The car can flip forward, backwards, barrel roll, or do a combination of forward and sideways motion. I implemented a trick recognition system that can assign points based on the number of flips the player does. The system does nothing as the car is on the ground, but when the car is airborne, it starts to track the change in the car’s x and y rotation changes. Every time a car’s rotation passes a multiple of 360 degrees, points are awarded based on the flip. Additionally, if a flip is stopped midway through, the car will rotate back to 0 before landing.
-                            <!-- Assets Needed:
-                            -	Transform inspector with indicator showing 360 rotation and corresponding trick Text -->
-                        </p>
-                        <img src="vl_assets/Portfolio/Wave-Drifter/flip_recog.gif" alt="">
-                        <br>
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Wave-Drifter/flip_full_screen.gif" alt="" style="width: 500px">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                One of the main mechanics is the ability to do tricks in the air. The car can flip forward, backwards, barrel roll, or do a combination of forward and sideways motion. I implemented a trick recognition system that can assign points based on the number of flips the player does. The system does nothing as the car is on the ground, but when the car is airborne, it starts to track the change in the car’s x and y rotation changes. Every time a car’s rotation passes a multiple of 360 degrees, points are awarded based on the flip. Additionally, if a flip is stopped midway through, the car will rotate back to 0 before landing.
+                            </div>
+                        </div>
 
                         <h3>Event System</h3>
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Wave-Drifter/events_console.png" alt="" style="width: 500px">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                Many components of the game rely on an Events System to communicate between each other. Both the platform generation and flip recognition mentioned above, plus any communication with the Heads Up Display utilizes events. By creating an event manager, objects can invoke and listen for events. When an event is invoked, any listeners subscribed to that event will be notified and begin the methods required by the method. 
+                                <br>
+                                For example, any time the car collides with a coin, an event is invoked by the coin object. The HUD coin counter is listening for this event, and increments the counter every time the event is invoked.  
+                            </div>
+                        </div>
 
                         <p>
-                            Many components of the game rely on an Events System to communicate between each other. Both the platform generation and flip recognition mentioned above, plus any communication with the Heads Up Display utilizes events. By creating an event manager, objects can invoke and listen for events. When an event is invoked, any listeners subscribed to that event will be notified and begin the methods required by the method. 
-                            For example, any time the car collides with a coin, an event is invoked by the coin object. The HUD coin counter is listening for this event, and increments the counter every time the event is invoked.  
+                            
                             <!-- Assets Needed:
                             -	Console logging events, show how an event is invoked and listener responding -->
 
                         </p>
                         <br>
-
-                        <h3>Items</h3>
-
-                        <p>
-                            The player can pick up a variety of objects. See their effects below.
-                            <!-- Assets Needed:
-                            -	Rotating Items in a row, description of each item and how it was programmed -->
-                        </p>
                     </div>
                 </div>
                 <div class="container"><div class="line-divider"></div></div>
                 <div class="col-sm-12 ">
+                    <div class="prev-next-project col center">
+                        <a href="games.html"> Back to Games</a>
+                    </div>
                     <div class="row mh-related-post">
                         <div class="prev-next-project col-md-6 text-left">
                             <a href="/band.html"><i class="fa fa-angle-left"></i> Previous Project</a>

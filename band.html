@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/vl_style.css">
     <link rel="stylesheet" href="assets/css/portfolio-style.css">
+    <link rel="stylesheet" href="assets/css/paragraph-style.css">
 
 </head>
 
@@ -102,10 +103,10 @@
                     <img src="vl_assets/Portfolio/Band-Hero/band_perform.png" alt="Pic 1">
                   </div>
                   <div class="carousel-item">
-                    <img src="vl_assets/Portfolio/Wave-Drifter/Game_Screenshot_1.png" alt="Pic 2">
+                    <img src="vl_assets/Portfolio/Band-Hero/battle_screenshot.jpg" alt="Pic 2">
                   </div>
                   <div class="carousel-item">
-                    <video controls src="vl_assets/Portfolio/Band-Hero/band_demo_vid.mp4"></video>
+                    <img src="vl_assets/Portfolio/Band-Hero/town_screenshot.jpg" alt="Pic 2">
                   </div>
                 </div>
               
@@ -127,6 +128,9 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="about-project">
+                        <div class="center"><a class="btn btn-fill" href="https://www.youtube.com/watch?v=0IqsWL4A7Ig" target="_blank" rel="noopener noreferrer">Watch Gameplay Demo</a></div>
+                        <br>
+
                         <p>
                             I've always loved the concept of party-driven RPGs. You meet friends along a journey,
                             and as a team do what you couldn't do alone. This demo is more of a proof of concept, than a game, 
@@ -144,20 +148,33 @@
                         <h3>
                             State Machine Battle System
                         </h3>
-                        <img src="vl_assets/Portfolio/Band-Hero/perform.gif" alt="">
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Band-Hero/band_pick.gif" alt="">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                The turn-based battling system was created using a State Machine. This means that a game manager controls what phase of battle the game is in currently, and can transition to the next state based on conditions. The game manager alters behavior and player controls based on what phase is currently active. 
+                                Each state has a transition to a following state, or the end state once the battle is complete.
+                                <br>
+                                State machines remove the need for each module to have long conditional chains in order to perform certain methods. Instead, the game manager can call specific methods for each module, ignoring functionality that does not pertain to the current state.
+                            </div>
+                        </div>
 
-                        <p>
-                            The turn-based battling system was created using a State Machine. This means that a game manager controls what phase of battle the game is in currently, and can transition to the next state based on conditions. The game manager alters behavior and player controls based on what phase is currently active. 
-                        </p>
-                        <p>
-                            For example, in the planning phase, the player must select moves for each band member, and only when all band members are ready can the game progress to the performance phase. State machines remove the need for each module to have long conditional chains in order to perform certain methods. Instead, the game manager can call specific methods for each module, ignoring functionality that does not pertain to the current state.
-                            <br>
-                            Each state has a transition to a following state, or the end state once the battle is complete.
-                        </p>
-                        <img src="vl_assets/Portfolio/Band-Hero/transition_code.png" alt="">
-                        <img src="vl_assets/Portfolio/Band-Hero/band_pick.gif" alt="">
-                        <br>
                         <h3>
+                            Strategy and Movesets
+                        </h3>
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Band-Hero/perform.gif" alt="">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                In the planning phase, the player must select moves for each band member, and only when all band members are ready can the game progress to the performance phase. The idea is to select moves that get the band the most Star Points and swing the crowd to their side.
+                                <br>
+                            </div>
+                        </div>
+
+                        <br>
+                        <!-- <h3>
                             Rhythm Elements
                         </h3>
 
@@ -168,21 +185,20 @@
                         <p>
                             As for tap detection, I placed a 2D collider where the notes should be hit on time, and a collider on each note. If the player taps the key when the two colliders are overlapping, the system registers that as successful, and rewards the player positively. If the player taps while there is no overlap, the system counts this as a failure. I can modify the leniency of an on-time hit by adjusting the radius of the two colliders. A larger radius makes it easier for the player to tap on-time. 
                         </p>
-                        <!-- -	Rhythm element video -->
-
-                        <br>
+                        <br> -->
                         <h3>Crowd Generation and Responsiveness</h3>
 
                         <p>
                             Since the crowd determines the winner of the battle, it was important to have a crowd system that felt alive. To implement this, I created a modular prefab that I can assign skin and shirt colors. I created a few crowd dancing animations, and then developed a system of generating a grid of these prefabs. The entire crowd is controlled by one script, calling each of the crowd objects when an event occurs. Currently the crowd can go from idle to dancing, and turn around to face the band that is currently active in battle.
                         </p>
-                        <!-- -	Crowd generation
-                        -	Crowd animation video -->
 
                     </div>
                 </div>
                 <div class="container"><div class="line-divider"></div></div>
-                <div class="col-sm-12 ">
+                <div class="col-sm-12">
+                    <div class="prev-next-project col center">
+                        <a href="games.html"> Back to Games</a>
+                    </div>
                     <div class="row mh-related-post">
                         <div class="prev-next-project col-md-6 text-left">
                             <a href=""><i class="fa fa-angle-left"></i> Previous Project</a>

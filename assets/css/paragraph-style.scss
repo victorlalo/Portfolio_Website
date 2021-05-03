@@ -1,0 +1,22 @@
+@import "css-tree";
+@import "variable";
+@import "functions";
+@import "default-css";
+
+.paragraph-description{
+    .column-text{
+        font-size: large;
+    }
+    img{
+        width: auto;
+    }
+}
+
+h3{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+a{
+    color: $main-light;
+}

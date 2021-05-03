@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/vl_style.css">
     <link rel="stylesheet" href="assets/css/portfolio-style.css">
+    <link rel="stylesheet" href="assets/css/paragraph-style.css">
 
 </head>
 
@@ -130,45 +131,57 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-12">
                             <div class="about-project">
-                                <p>
-                                    For the Capstone Project of my 
-                                    <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>,
-                                    I wanted to do something unique, that acted as a culmination of my learning and proof of my abilities within the Unity Engine. I decided to create an
-                                    endless runner driving game, where the track keeps generating new sections with increasing difficulty.
+                                <p class="center">
+                                    <a class="btn btn-fill" href="https://madmystic.itch.io/hose-your-daddy" target="_blank" rel="noopener noreferrer">Play the game from your browser</a>
+                                    <a class="btn btn-fill" href="https://www.youtube.com/watch?v=zmiDocpyb0U" target="_blank" rel="noopener noreferrer">Watch the gameplay footage</a>
+                                    <br>
+                                    <br>
                                 </p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
+                                    This game was made for the 2020 Game Maker’s Tool Kit game jam. A game jam is a marathon where developers must create a game in 48 hours. It is a wonderful exercise of being able to work efficiently in a restricted time frame. It tests a team’s ability to time manage effectively, prioritizing tasks and being able to make sacrifices for their vision. I was able to collaborate with an amazing team of artists, programmers, and designers for this event, and at the end of a weekend we were able to do more than I had done with any game project.
+                                </p>
+                                <p>
+                                    The theme for the game jam was “Out of Control”. Our team spend the first few hours ideating on these words, and came up with the concept of a chaotic hose that sprays water in random directions. The result was a goofy and wonderful platform brawler, where you use hoses to push your opponent off the stage. This game took a lot of inspiration from the Super Smash Brothers series, but gave it our unique flavor.
                                 </p>
 
-                                <img src="vl_assets/Portfolio/Game-Jam/droplet_demo.gif" alt="">
-                                <img src="vl_assets/Portfolio/Game-Jam/droplet_layer_code.png" alt="">
-
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan et iusto odio dignissim qui blandit praesent .
-                                </p>
-                                <img src="vl_assets/Portfolio/Game-Jam/rope-physics.gif" alt="">
-                                <img src="vl_assets/Portfolio/Game-Jam/rope_simulation_code.png" alt="">
+                                <div class="col center">
+                                    <img src="vl_assets/Portfolio/Game-Jam/gameplay.gif" alt="" class="align-content-center">
+                                </div>
                                 
+        
+                                <h3>Droplet Particles</h3>
+                                <div class="row paragraph-description">
+                                    <div class="col">
+                                        <img src="vl_assets/Portfolio/Game-Jam/droplet_demo.gif" alt="">
+                                    </div>
+                                    <div class="col align-self-center column-text">
+                                        I implemented an emission system to spray at your opponents. The hose instatiates a droplet at the position of the nozzle at a given time interval. We had to account for each player's droplets now affecting themselves, only the opponent, so we separated the two player's particles into different physics layers that do not collide with their corresponding owner.
+                                    </div>
+                                </div>
+                                
+                                <h3>Hose Physics</h3>
+                                <div class="row paragraph-description">
+                                    <div class="col">
+                                        <img src="vl_assets/Portfolio/Game-Jam/rope-physics.gif" alt="">
+                                    </div>
+                                    <div class="col align-self-center column-text">
+                                        I wanted to make the hose react to movement, and made the rope as a Linked List of lines that react to the next and previous segments in the chain. The first segment is fixed to a specified position, and the last segment is attached to the transform of the player. By looping through the Linked List, the segments respond according to the movement of the other segments, giving the hose a semi-realistic, physics driven rendering.
+                                    </div>
+                                </div>
+        
                             </div>
                         </div>
+                        <div class="container"><div class="line-divider"></div></div>
                         <div class="col-sm-12 ">
+                            <div class="prev-next-project col center">
+                                <a href="games.html"> Back to Games</a>
+                            </div>
                             <div class="row mh-related-post">
-                                <div class="mh-blog-next-prev-post col-md-6 text-left">
-                                    <a href=""><i class="fa fa-angle-left"></i> Previous Project</a>
+                                <div class="prev-next-project col-md-6 text-left">
+                                    <a href="/wave-drifter.html"><i class="fa fa-angle-left"></i> Previous Project</a>
                                 </div>
-                                <div class="mh-blog-next-prev-post col-md-6 text-right">
-                                    <a href="">Next Project <i class="fa fa-angle-right"></i></a>
+                                <div class="prev-next-project col-md-6 text-right">
+                                    <a href="/ampy.html">Next Project <i class="fa fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>

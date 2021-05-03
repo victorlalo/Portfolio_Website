@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/vl_style.css">
     <link rel="stylesheet" href="assets/css/portfolio-style.css">
+    <link rel="stylesheet" href="assets/css/paragraph-style.css">
 
 </head>
 
@@ -128,62 +129,69 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="about-project">
+                        <p class="center">
+                            <a class="btn btn-fill" href="https://madmystic.itch.io/hyperspace-defender" target="_blank" rel="noopener noreferrer">Play the game from your browser</a>
+                            <a class="btn btn-fill" href="https://www.youtube.com/watch?v=G54n8Ep-PX0&t=2s" target="_blank" rel="noopener noreferrer">Watch the gameplay footage</a>
+                            <br>
+                            <br>
+                        </p>
                         <p>
                             This game was made for the University of Colorado 
                             <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>.
-                             The task was to create a 2D shooter inspired by the arcade space games of the early 80’s. We were to concentrate mainly on the game mechanics, including movement, object collision, and enemy behavior. I went a few steps further and made original 3D models in Blender, and an original song and sound effects in Ableton Live. You can play by visiting the itch.io link below.
+                             The task was to create a 2D shooter inspired by the arcade space games of the early 80’s. We were to concentrate mainly on the game mechanics, including movement, object collision, and enemy behavior. I went a few steps further and made original 3D models in Blender, and an original song and sound effects in Ableton Live.
                         </p>
+                        <div class="col center">
+                            <img src="vl_assets/Portfolio/Hyperspace/HSD_gameplay.gif" alt="">
+                        </div>
+                        <br>
                         <p>
                             The game is one endless level, where the player tries to defend against an endless wave of galactic threats. While the gameplay is derivative of some of the greats like Galaga, Space Invaders, and Gradius, I used some features that helped optimize the speed and development of the game.
                         </p>
 
-                        <div class="align-content-center"><iframe width="500" height="300" src="https://www.youtube.com/embed/G54n8Ep-PX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-                        <br>
+                        
                         <h3>Object Pooling</h3>
-
-                        <p>
-                            I utilized object pooling to make use of resources more efficient. Pooling allows the engine to pre-load many objects that would have to be instantiated very often and setting the active state to false, ready to activate whenever it is needed. Object pooling was used for player and enemy bullets, visual effects (explosions), and item pickups.
-                        </p>
-                        <p>
-                            For example, when a player shoots, a bullet would normally have to be instantiated at the ship’s position. When the bullet hits an enemy or exits the screen, that object would need to be destroyed. This can be costly if many bullets are constantly entering and leaving the scene.  
-                        </p>
-                        <p>
-                            With object pooling, a large amount of bullets are instantiated at the start of the level. When the player shoots, the system instead places an inactive bullet from the pool at the position of the ship, and sets it to active. The bullet is then set to inactive and returned to the pool instead of being destroyed. If there are no available inactive bullets, the pooling system instantiates a set number of extra bullets and places them in the inactive pool.
-                        </p>
-                        <img src="vl_assets/Portfolio/Hyperspace/object_pool/bullet_pool.gif" alt="">
-                        <img src="vl_assets/Portfolio/Hyperspace/object_pool/code_get_bullet.png" alt="">
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Hyperspace/object_pool/bullet_pool.gif" alt="" style="width: 500px">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                I utilized object pooling to make use of resources more efficient. Pooling allows the engine to pre-load many objects that would have to be instantiated very often and setting the active state to false, ready to activate whenever it is needed. Object pooling was used for player and enemy bullets, visual effects (explosions), and item pickups.
+                                <br>
+                                With object pooling, a large amount of bullets are instantiated at the start of the level. When the player shoots, the system instead places an inactive bullet from the pool at the position of the ship, and sets it to active. The bullet is then set to inactive and returned to the pool instead of being destroyed. If there are no available inactive bullets, the pooling system instantiates a set number of extra bullets and places them in the inactive pool.
+                            </div>
+                        </div>
+                        <!-- <img src="vl_assets/Portfolio/Hyperspace/object_pool/code_get_bullet.png" alt="">
                         <img src="vl_assets/Portfolio/Hyperspace/object_pool/code_initialization.png" alt="">
-                        <img src="vl_assets/Portfolio/Hyperspace/object_pool/code_player_shoot.png" alt="">
+                        <img src="vl_assets/Portfolio/Hyperspace/object_pool/code_player_shoot.png" alt=""> -->
 
-                        <br>
+                        <h3>Modelling</h3>
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Hyperspace/object_rotate.gif" alt="" style="width: 500px">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                I modelled the ship and a few enemy variations. I also modelled a rocket and bullets that the player shoots.
+                            </div>
+                        </div>
+
                         <h3>Multiple Weapons and Item Pickups</h3>
-                        <p>
-                            I added an item pickup system giving the player more attack and defense options. There are three weapon types and a shield. The items have differing spawn chances when an enemy is destroyed, weighed from least valuable to most. See below the different pickups and their abilities.
-
-                            <!-- Assets Needed:
-                            -	Rotating Items in a row, description of each item and how it was programmed -->
-                        </p>
-
-                        <br>
-                        <h3>Enemy Behavior Inheritance</h3>
-                        <p>
-                            I was able to use inheritance for enemy behavior, saving development time on the creation of new enemy types. While each alien color and the UFO move and attack differently, they all share a Parent Class for base enemy behavior. Each Child Class can then implement new behaviors such as movement variations, life-points, or frequency of attack. See below for how each enemy differs.
-
-                            <!-- Assets Needed:
-                            -	Enemy movement video, rotating video of enemies in a row. Talk about how I created them in blender -->
-                        </p>
-
-                        <br>
-
-                        <h3>Particle System</h3>
-                        <img src="vl_assets/Portfolio/Hyperspace/Particles/" alt="">
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Hyperspace/icons.png" alt="" style="width: 500px">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                I added an item pickup system giving the player more attack and defense options. There are three weapon types and a shield. The items have differing spawn chances when an enemy is destroyed, weighed from least valuable to most. See below the different pickups and their abilities.
+                            </div>
+                        </div>
 
 
                     </div>
                 </div>
                 <div class="container"><div class="line-divider"></div></div>
                 <div class="col-sm-12 ">
+                    <div class="prev-next-project col center">
+                        <a href="games.html"> Back to Games</a>
+                    </div>
                     <div class="row mh-related-post">
                         <div class="prev-next-project col-md-6 text-left">
                             <a href="/wave-drifter.html"><i class="fa fa-angle-left"></i> Previous Project</a>

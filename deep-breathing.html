@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/vl_style.css">
     <link rel="stylesheet" href="assets/css/portfolio-style.css">
+    <link rel="stylesheet" href="assets/css/paragraph-style.css">
+    
 
 </head>
 
@@ -128,50 +130,60 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="about-project">
-                        <p>
-                            This game was made for the University of Colorado 
-                            <a href="https://www.coursera.org/specializations/programming-unity-game-development">Game Development Specialization</a>.
-                             The task was to create a 2D shooter inspired by the arcade space games of the early 80’s. We were to concentrate mainly on the game mechanics, including movement, object collision, and enemy behavior. I went a few steps further and made original 3D models in Blender, and an original song and sound effects in Ableton Live. You can play by visiting the itch.io link below.
+                        <p class="center">
+                            <a class="btn btn-fill" href="https://madmystic.itch.io/deep-breathing" target="_blank" rel="noopener noreferrer">Play the game from your browser</a>
+                            <a class="btn btn-fill" href="https://www.youtube.com/watch?v=wQb9sLeaprg" target="_blank" rel="noopener noreferrer">Watch the gameplay footage</a>
+                            <br>
+                            <br>
                         </p>
                         <p>
-                            The game is one endless level, where the player tries to defend against an endless wave of galactic threats. While the gameplay is derivative of some of the greats like Galaga, Space Invaders, and Gradius, I used some features that helped optimize the speed and development of the game.
+                            Game Jams are always a great way to test your stamina, determination, and discipline. It also allows me to reflect my growth as a game developer year over year. 
                         </p>
-                        <img src="vl_assets/Portfolio/Deep-Breathing/rotating_icons.gif" alt="">
-                        <img src="vl_assets/Portfolio/Deep-Breathing/space_transition.gif" alt="">
-                        <img src="vl_assets/Portfolio/Deep-Breathing/distractions.gif" alt="">
-                        <img src="vl_assets/Portfolio/Deep-Breathing/breathing.gif" alt="">
-
+                        <div class="col center">
+                            <img src="vl_assets/Portfolio/Deep-Breathing/distractions.gif" alt=""> 
+                        </div>
                         <br>
-                        <h3>Multiple Weapons and Item Pickups</h3>
                         <p>
-                            I added an item pickup system giving the player more attack and defense options. There are three weapon types and a shield. The items have differing spawn chances when an enemy is destroyed, weighed from least valuable to most. See below the different pickups and their abilities.
-
-                            <!-- Assets Needed:
-                            -	Rotating Items in a row, description of each item and how it was programmed -->
+                            This project was made in 72 hours for the Ludum Dare 48 Game Jam. The team consisted of myself doing 3D modeling, animation, and visual scripting, and a fellow programmer handling systems, events, and mechanics. The theme was “Deeper and Deeper”. Below I will outline each step of the development process for a game jam.
                         </p>
 
-                        <br>
-                        <h3>Enemy Behavior Inheritance</h3>
-                        <p>
-                            I was able to use inheritance for enemy behavior, saving development time on the creation of new enemy types. While each alien color and the UFO move and attack differently, they all share a Parent Class for base enemy behavior. Each Child Class can then implement new behaviors such as movement variations, life-points, or frequency of attack. See below for how each enemy differs.
+                        <h3>Breathing Mechanic</h3>
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Deep-Breathing/breathing.gif" alt="">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                We decided to focus on creating a mechanic for breathing in and out and a steady pulse, and the character transitioning into deeper states of concentration. The idea is to breathe away distractions that take you out of the moment. Our result was very simple, you hold the space bar to breathe in and release to let out your breath. A puff of air is then shot in the direction that the player specifies, and dissolves any distractions in its path.
+                            </div>
+                        </div>
+                        
+                        <h3>Modelling</h3>
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Deep-Breathing/rotating_icons.gif" alt="">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                The main obstacle to deep concentration are distractions, so I modelled a bunch of things that take up space in one’s mind. During our brainstorm we came up with various thoughts, and randomly generate text on a thought bubble icon. We also included worries of time, money, and deadlines. We added material objects that can deter one from being present, such as phones and TVs. There are also environmental distractions, like external sounds and a storm.
+                            </div>
+                        </div>
 
-                            <!-- Assets Needed:
-                            -	Enemy movement video, rotating video of enemies in a row. Talk about how I created them in blender -->
-                        </p>
-
-                        <br>
-                        <h3>Responsive Sound</h3>
-                        <p>
-                            When creating the sounds and music for the game, I kept in mind that I wanted the sound to be responsive to changes in game state. 
-                        </p>
-
-                        <h3>Particle System</h3>
-
+                        <h3>Transitions</h3>
+                        <div class="row paragraph-description">
+                            <div class="col">
+                                <img src="vl_assets/Portfolio/Deep-Breathing/space_transition.gif" alt="">
+                            </div>
+                            <div class="col align-self-center column-text">
+                                We knew we needed the environment of the game to be dynamic to push the idea of deeper states of concentration. So we made 3 transitions into different backdrops to represent the deepening of concentration. The player goes from their living room to space to an immaterial geometric plane. Finally, the player arrives at Nirvana, a white void of peace. At this stage, the player and all distractions vanish.
+                            </div>
+                        </div>
 
                     </div>
                 </div>
                 <div class="container"><div class="line-divider"></div></div>
                 <div class="col-sm-12 ">
+                    <div class="prev-next-project col center">
+                        <a href="games.html"> Back to Games</a>
+                    </div>
                     <div class="row mh-related-post">
                         <div class="prev-next-project col-md-6 text-left">
                             <a href="/wave-drifter.html"><i class="fa fa-angle-left"></i> Previous Project</a>
