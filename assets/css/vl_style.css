@@ -154,6 +154,10 @@
   font-size: 18px;
 }
 
+.blog-inner .btn:hover {
+  color: white;
+}
+
 .contact {
   background-color: #880304;
   padding: 3%;
