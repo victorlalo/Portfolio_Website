@@ -146,14 +146,18 @@
                                 </p>
 
                                 <div class="col center">
-                                    <img src="vl_assets/Portfolio/Game-Jam/gameplay.gif" alt="" class="align-content-center">
+                                    <video width="640" autoplay loop>
+                                        <source src="vl_assets/Portfolio/Game-Jam/640p_gameplay_resized.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                                 
         
                                 <h3>Droplet Particles</h3>
                                 <div class="row paragraph-description">
                                     <div class="col">
-                                        <img src="vl_assets/Portfolio/Game-Jam/droplet_demo.gif" alt="">
+                                        <video width="560" autoplay loop>
+                                            <source src="vl_assets/Portfolio/Game-Jam/640_particles.mp4" type="video/mp4">
+                                        </video>
                                     </div>
                                     <div class="col align-self-center column-text">
                                         I implemented an emission system to spray at your opponents. The hose instatiates a droplet at the position of the nozzle at a given time interval. We had to account for each player's droplets now affecting themselves, only the opponent, so we separated the two player's particles into different physics layers that do not collide with their corresponding owner.
@@ -163,7 +167,9 @@
                                 <h3>Hose Physics</h3>
                                 <div class="row paragraph-description">
                                     <div class="col">
-                                        <img src="vl_assets/Portfolio/Game-Jam/rope-physics.gif" alt="">
+                                        <video width="560" autoplay loop>
+                                            <source src="vl_assets/Portfolio/Game-Jam/640_rope_physics.mp4" type="video/mp4">
+                                        </video>
                                     </div>
                                     <div class="col align-self-center column-text">
                                         I wanted to make the hose react to movement, and made the rope as a Linked List of lines that react to the next and previous segments in the chain. The first segment is fixed to a specified position, and the last segment is attached to the transform of the player. By looping through the Linked List, the segments respond according to the movement of the other segments, giving the hose a semi-realistic, physics driven rendering.

@@ -430,9 +430,9 @@
         //         border: 20px solid rgba(0, 0, 0, 0.40);
         //     }
         // }
-        // .img-border {
-        //     border: 20px solid rgba(0, 0, 0, 0.90);
-        // }
+        .img-border {
+            border: 20px solid $background-1;
+        }
     }
     .candidatos .parcial .progressBar {
         background: rgba(199, 198, 198, 0.6);
@@ -815,8 +815,8 @@
         }
     }
     .img-border {
-        height: 450px;
-        width: 450px;
+        height: 500px;
+        width: 500px;
         border: 20px solid rgba(0, 0, 0, 0.07);
         margin: 0 auto;
         border-radius: 50%;
@@ -927,10 +927,11 @@
 }
 
 .mh-progress {
-    margin-bottom: 10px;
-    font: 900 1.1428571429em/1 Cinzel, cursive;
+    margin: 10px;
+    // font: 900 1.1428571429em/1 Cinzel, cursive;
     .progressbar-text {
         color: inherit !important;
+        font-size: 26px;
     }
 }
 
@@ -941,7 +942,7 @@
 }
 
 .progress.progress-line .progressbar-text {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 100%;
     width: 60px;
@@ -953,7 +954,7 @@
 
 .mh-progress.mh-progress-circle {
     display: block;
-    width: 100%;
+    // width: 70%;
     // height: 100px;
 }
 
@@ -980,7 +981,7 @@
                 position: absolute;
                 top: 0;
                 left:0;
-                font-size: 15px;
+                font-size: 20px;
                 font-weight: 600;
                 opacity: 0.9;
                 // // color: $white;

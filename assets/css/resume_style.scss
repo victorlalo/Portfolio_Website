@@ -47,7 +47,7 @@
 
 .resume-title{
     // margin-left: 15%;
-    margin-top: -5%;
+    // margin-top: 0%;
     margin-bottom: 10px;
     h1{
         margin-bottom: .1em;
@@ -112,6 +112,10 @@
     line-height: 40px;
     font-weight: bold;
     margin: 30px 0;
+}
+
+.info{
+    font-size: 30px;
 }
 
 .info-box{
@@ -180,14 +184,18 @@
 }
 
 .circle-progress{
-    text-align: center;
+    // text-align: center;
     font-size: 18px;
     font-weight: bold;
     // margin-top: 1em;
-    padding: 15%;
+    padding: 2%;
 
     .row{
         margin-bottom: 1.5em;
+    }
+
+    .pr-skill-name{
+        text-align: center;
     }
 }
 
@@ -199,14 +207,23 @@
     }
 }
 
+.work-exp{
+    .row{
+        padding-bottom: 4%;
+    }
+}
+
 .resume-certificates{
-    padding: 0 5%;
+    padding: 0 0%;
     margin-top: 0;
     img{
         width:80%;
     }
-    h3{
-        margin: 0 0;
+    h4{
+        font-weight : normal;
+    }
+    a:hover{
+        color: $main-color;
     }
 }
 

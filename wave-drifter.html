@@ -138,7 +138,9 @@
                         <h3>Endless Platform Generation</h3>
                         <div class="row paragraph-description">
                             <div class="col">
-                                <img src="vl_assets/Portfolio/Wave-Drifter/platform_spawn.gif" alt="" style="width: 500px">
+                                <video width="560" autoplay loop>
+                                    <source src="vl_assets/Portfolio/Wave-Drifter/640_plat_spawn.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="col align-self-center column-text">
                                 As the car progresses through the world, new platforms are created and randomly populated with ramps, obstacles and power ups. This is accomplished through Trigger Gates placed at the end of each active platform and a Linked List of active platforms. When the car passes through a gate, the first platform of the Linked List is moved to a new position at the end of the chain, and new objects are generated on the platform. There are always a fixed number of platforms active at one time
@@ -150,7 +152,9 @@
                         <h3>Trick/Flip Recognition</h3>
                         <div class="row paragraph-description">
                             <div class="col">
-                                <img src="vl_assets/Portfolio/Wave-Drifter/flip_full_screen.gif" alt="" style="width: 500px">
+                                <video width="560" autoplay loop>
+                                    <source src="vl_assets/Portfolio/Wave-Drifter/640_flip.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="col align-self-center column-text">
                                 One of the main mechanics is the ability to do tricks in the air. The car can flip forward, backwards, barrel roll, or do a combination of forward and sideways motion. I implemented a trick recognition system that can assign points based on the number of flips the player does. The system does nothing as the car is on the ground, but when the car is airborne, it starts to track the change in the car’s x and y rotation changes. Every time a car’s rotation passes a multiple of 360 degrees, points are awarded based on the flip. Additionally, if a flip is stopped midway through, the car will rotate back to 0 before landing.

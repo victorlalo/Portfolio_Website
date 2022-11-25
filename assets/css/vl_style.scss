@@ -86,12 +86,12 @@
         //filter:invert(1);
     }
 
-    .gaia {
+    .nu {
         margin-left: 15%;
-        width: 70%;
+        width: 40%;
     }
 
-    .sandc {
+    .dolby {
         width: 50%;
     }
         
@@ -157,8 +157,12 @@
     padding: 1em 0;
 }
 
-.mh-portfolio{
+.mh-blog{
     background-color: $main-dark;
+}
+
+.mh-portfolio{
+    // background-color: $black-bg;
 }
 
 .mh-service{
